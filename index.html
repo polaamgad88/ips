@@ -17,17 +17,26 @@
         <div class="menu-toggle" onclick="toggleMenu()">☰</div>
         <ul class="nav-links" id="navMenu">
             <li><a href="#home" onclick="closeMenu()">Home</a></li>
-            <li><a href="#services" onclick="closeMenu()">Services</a></li>
-            <li><a href="#info" onclick="closeMenu()">About</a></li>
-            <li><a href="#DIVISIONS" onclick="closeMenu()">Different divisions</a></li>
+            <li class="dropdown">
+                <a href="#services" onclick="closeMenu()">Services</a>
+                <ul class="dropdown-menu">
+                    <li><a href="./retrofits.html"> Retrofits</a></li>
+                    <li><a href="./troubleshooting.html">Troubleshooting</a></li>
+                    <li><a href="./installation.html">Installation</a></li>
+                    <li><a href="./consult.html">Consulting</a></li>
+                    <li><a href="./commission.html">Commissioning</a></li>
+                    <li><a href="./overhaul.html">Overhauling</a></li>
+                </ul>
+            </li>            <li><a href="#info" onclick="closeMenu()">About</a></li>
+            <li><a href="./gallery.html" onclick="closeMenu()">Gallery</a></li>
             <li><a href="#contact" onclick="closeMenu()">Contact Us</a></li>
         </ul>
     </nav>
     
     <!-- Header -->
     <div class="header" >
-        <img src="./assets/logo.png" alt="IPS Global Logo">
-    </div>
+        <a href="./index.html">
+            <img src="./assets/logo.png" alt="IPS Global Logo"></a>    </div>
 
     <!-- Hero Section -->
     <!-- Hero Section -->
@@ -61,27 +70,36 @@
         <h2>OUR SERVICES</h2>
         <div class="service-container">
             <div class="service-item">
+            <a href="./retrofits.html">
                 <img src="./assets/retro.png" alt="Retrofits">
+            </a>
                 <p>RETROFITS</p>
             </div>
+
+
             <div class="service-item">
-                <img src="./assets/troubl.png" alt="Troubleshooting">
+                <a href="./troubleshooting.html">
+                    <img src="./assets/troubl.png" alt="Troubleshooting"></a>
                 <p>TROUBLESHOOTING</p>
             </div>
             <div class="service-item">
-                <img src="./assets/install.png" alt="Installation">
+                <a href="./installation.html">
+                    <img src="./assets/install.png" alt="Installation"></a>
                 <p>INSTALLATION & RELOCATION</p>
             </div>
             <div class="service-item">
-                <img src="./assets/consult.png" alt="Consulting">
+                <a href="./consult.html">
+                    <img src="./assets/consult.png" alt="Consulting"></a>
                 <p>CONSULTING</p>
             </div>
             <div class="service-item">
-                <img src="./assets/comm.png" alt="Commissioning">
+                <a href="./commission.html">
+                    <img src="./assets/comm.png" alt="Commissioning"></a>
                 <p>COMMISSIONING</p>
             </div>
             <div class="service-item">
-                <img src="./assets/over.png" alt="Overhauling">
+                <a href="./overhaul.html">
+                    <img src="./assets/over.png" alt="Overhauling"></a>
                 <p>OVERHAULING</p>
             </div>
         </div>

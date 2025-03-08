@@ -51,6 +51,45 @@ body {
 
 
 
+/* Style for dropdown */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    list-style: none;
+    padding: 10px 0;
+    min-width: 150px;
+    z-index: 1000;
+    text-align: left;
+}
+
+.dropdown-menu li {
+    padding: 8px 15px;
+}
+
+.dropdown-menu a {
+    text-decoration: none;
+    color: #1f2b49;
+    display: block;
+}
+
+.dropdown-menu a:hover {
+    background: #f0f0f0;
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+
 
 /* Mobile styles */
 @media screen and (max-width: 768px) {
@@ -112,22 +151,21 @@ body {
     position: relative;
     text-align: left;
     color: #1f2b49;
-    /* background: #f2f2f2;
-    padding: 50px; */
 }
 
 .hero-content {
     position: absolute;
 }
 
-@keyframes slideInLeft {
+/* Updated Animation - Slide from Bottom to Top */
+@keyframes slideInUp {
     from {
         opacity: 0;
-        transform: translateX(-100px);
+        transform: translateY(100px); /* Move up from below */
     }
     to {
         opacity: 1;
-        transform: translateX(0);
+        transform: translateY(0);
     }
 }
 
@@ -137,10 +175,11 @@ body {
     margin-left: 15%;
     width: 1000px;
     font-weight: bold;
-    
-    /* Apply animation */
-    animation: slideInLeft 1s ease-out;
+
+    /* Apply new animation */
+    animation: slideInUp 1s ease-out;
 }
+
 
 html {
     scroll-behavior: smooth;
@@ -275,8 +314,6 @@ html {
 
 
 
-
-
 /* Services Section */
 .services {
     background: white;
@@ -292,35 +329,29 @@ html {
 /* Make all services in one row */
 .service-container {
     display: flex;
-    justify-content: center;
-    /* Center align items */
+    justify-content: center; /* Center align items */
     align-items: center;
-    gap: 50px;
-    /* Space between services */
-    flex-wrap: nowrap;
-    /* Prevent wrapping */
-    max-width: 100%;
-    /* Ensure full width */
-    overflow-x: auto;
-    /* Scroll if screen is small */
+    gap: 50px; /* Space between services */
+    flex-wrap: nowrap; /* Prevent wrapping */
+    max-width: 100%; /* Ensure full width */
+    overflow-x: auto; /* Scroll if screen is small */
 }
 
 /* Service Item */
 .service-item {
     margin-top: 3%;
-
     text-align: center;
     width: 180px;
+    
+    /* Change animation direction */
     opacity: 0;
-    transform: translateX(-100px);
+    transform: translateY(100px); /* Move up from below */
     transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-
 }
-
 
 .service-item.show {
     opacity: 1;
-    transform: translateX(0);
+    transform: translateY(0); /* Arrive at normal position */
 }
 
 /* Make circle size bigger */
@@ -443,7 +474,6 @@ html {
     gap: 50px;
     flex-wrap: wrap;
 }
-
 .division-card {
     background: none;
     padding: 20px;
@@ -452,14 +482,17 @@ html {
     border-radius: 10px;
     /* box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15); */
 
-    opacity: 0; transform: translateX(-50px);
-    transition: opacity 0.8s ease-out, transform 0.8s ease-out; 
+    /* Change animation direction */
+    opacity: 0;
+    transform: translateY(50px); /* Move up from below */
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
 
 .division-card.show {
     opacity: 1;
-    transform: translateX(0);
+    transform: translateY(0); /* Arrive at normal position */
 }
+
 .division-card img {
     width: 100%;
     height: 250px;
@@ -481,14 +514,12 @@ html {
     text-align: center;
     padding: 40px 20px;
     background-color: #f8f9fa;
-    /* Adjust as needed */
 }
 
 .strategy-title {
     font-size: 40px;
     font-weight: bolder;
     color: #222;
-    /* Adjust the color */
 }
 
 .strategy-text {
@@ -497,21 +528,21 @@ html {
     max-width: 800px;
     margin: 0 auto;
     line-height: 1.6;
-    white-space: pre-line; /* Prevents text wrapping */
-    overflow: hidden; /* Hides the text initially */
-    border-right: 2px solid #444; /* Creates a typing cursor effect */
+    white-space: pre-line;
+    overflow: hidden;
+    
+    /* Animation - Start hidden and slightly below */
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
 
-
-.cursor {
-    display: inline-block;
-    width: 10px;  /* Adjust width */
-    animation: blink 0.7s infinite;
+/* When 'show' class is added (Make it visible and move up) */
+.strategy-text.show {
+    opacity: 1;
+    transform: translateY(0);
 }
 
-@keyframes blink {
-    50% { opacity: 0; }
-}
 
 
 /* teeeeeeeeeeeeeessssstttt */
