@@ -10,6 +10,7 @@ body {
     background: white;
     padding: 10px;
 }
+
 .header img {
     max-width: 200px;
 }
@@ -19,21 +20,33 @@ body {
     position: relative;
     text-align: left;
     color: #1f2b49;
-    background: #f2f2f2;
-    padding: 50px;
+    /* background: #f2f2f2;
+    padding: 50px; */
 }
+
+.hero-content {
+    position: absolute;
+}
+
 .hero h1 {
     font-size: 4rem;
     margin: 0;
-    margin-left: 10%;
-}
-.hero span {
+    margin-left: 15%;
+    width: 1000px;
     font-weight: bold;
+
 }
+
+.hero span {
+    width: 100px;
+    display: contents;
+}
+
 .hero p {
-    font-size: 1.2rem;
-    margin-left: 10%;
+    font-size: 2.2rem;
+    margin: 0.5rem 15%;
 }
+
 .btn {
     display: inline-block;
     background: #c00;
@@ -41,16 +54,61 @@ body {
     padding: 10px 20px;
     text-decoration: none;
     font-weight: bold;
-    border-radius: 5px;
-    margin-left: 10%;
+    border-radius: 1.2rem;
+    margin-left: 15%;
     text-decoration: underline;
 }
+
 .background {
     width: 100%;
-    max-width: 1000px;
+    max-width: 1300px;
     display: block;
-    margin: 20px auto;
+    margin: auto;
 }
+
+
+
+
+/* --- Responsive Design for Mobile (Screens Smaller than 768px) --- */
+@media (max-width: 768px) {
+    .hero-content {
+        position: relative; /* Change from absolute to relative */
+        text-align: center; /* Center-align text for better readability */
+        padding: 20px;
+        top: auto;
+        left: auto;
+        right: auto;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem; /* Decrease font size */
+        margin: 0 auto;
+        width: 90%;
+    }
+
+    .hero p {
+        font-size: 1.5rem; /* Adjust paragraph font size */
+        margin: 10px auto;
+        width: 90%;
+    }
+
+    .btn {
+        margin: 10px auto;
+        font-size: 1.2rem;
+        padding: 8px 16px;
+    }
+
+    .background {
+        width: 100%;
+        max-width: 100%; /* Ensure the image is fully responsive */
+    }
+}
+
+
+
+
+
+
 
 /* Banner Section */
 .banner {
@@ -59,39 +117,72 @@ body {
     color: white;
     text-align: center;
 }
+
 .banner-content {
     max-width: 800px;
     margin: auto;
 }
+
 .banner h2 {
     font-size: 2.5rem;
     font-weight: bold;
 }
+
 .banner p {
     font-size: 2rem;
     line-height: 1.5;
 }
+
+
+@media (max-width: 768px) {
+    .banner {
+        height: max-content; /* Adjust height for smaller screens */
+        padding: 49vw 14vw;
+    }
+
+    .banner-content {
+        max-width: 90vw;
+    }
+
+    .banner h2 {
+        font-size: 7vw;
+    }
+
+    .banner p {
+        font-size: 4vw;
+    }
+}
+
+
+
+
+
 /* Services Section */
 .services {
     background: white;
     padding: 50px 20px;
 }
+
 .services h2 {
     font-size: 28px;
     color: #1f2b49;
     margin-bottom: 20px;
 }
-/* teeeeeeeeeeeeeessssstttt */
 
 /* Make all services in one row */
 .service-container {
     display: flex;
-    justify-content: center; /* Center align items */
+    justify-content: center;
+    /* Center align items */
     align-items: center;
-    gap: 50px; /* Space between services */
-    flex-wrap: nowrap; /* Prevent wrapping */
-    max-width: 100%; /* Ensure full width */
-    overflow-x: auto; /* Scroll if screen is small */
+    gap: 50px;
+    /* Space between services */
+    flex-wrap: nowrap;
+    /* Prevent wrapping */
+    max-width: 100%;
+    /* Ensure full width */
+    overflow-x: auto;
+    /* Scroll if screen is small */
 }
 
 /* Service Item */
@@ -99,52 +190,95 @@ body {
     margin-top: 3%;
 
     text-align: center;
-    width: 180px; /* Adjust width */
+    width: 180px;
+    /* Adjust width */
 }
 
 /* Make circle size bigger */
 .service-item img {
-    width: 120px; /* Increase size */
+    width: 120px;
+    /* Increase size */
     height: 120px;
 }
+
 .service-item p {
     font-size: 16px;
     font-weight: bold;
     margin-top: 10px;
 }
 
+
+
+@media (max-width: 768px) {
+    .service-container {
+        flex-direction: column;  /* Stack items vertically */
+        align-items: center; /* Center-align services */
+        gap: 30px; /* Reduce space between items */
+    }
+
+    .service-item {
+        width: 100%; /* Full width */
+    }
+
+    .service-item img {
+        width: 150px; /* Slightly bigger icons for better visibility */
+        height: 150px;
+    }
+
+    .service-item p {
+        font-size: 18px; /* Make text more readable */
+    }
+}
+
+
+
+
+
+
+
+
+
 .about-section {
     text-align: center;
     padding: 60px 20px;
     background: white;
 }
+
 .about-section h2 {
     font-size: 36px;
     color: #1f2b49;
     margin-bottom: 40px;
     font-weight: bold;
 }
+
 .about-container {
     display: flex;
     justify-content: center;
     gap: 40px;
     flex-wrap: wrap;
 }
+
 .about-card {
     background: #f2f2f2;
     padding: 30px;
-    width: 400px;  /* Increased size */
+    width: 400px;
+    /* Increased size */
     text-align: center;
-    border-radius: 0; /* Removed border-radius for sharp edges */
+    border-radius: 0;
+    /* Removed border-radius for sharp edges */
     box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.15);
 }
+
 .about-card img {
     width: 100%;
-    height: 300px; /* Increased size */
+    height: 300px;
+    /* Increased size */
     object-fit: cover;
 }
+
 .about-card p {
-    font-size: 20px; /* Bigger text */
+    font-size: 20px;
+    /* Bigger text */
     color: #333;
     margin-top: 15px;
     font-weight: 500;
@@ -161,22 +295,26 @@ body {
     background: #f2f2f2;
     padding: 60px 20px;
 }
+
 .divisions-section h2 {
     font-size: 40px;
     font-weight: bolder;
     color: #1f2b49;
 }
+
 .divisions-section p {
     font-size: 20px;
     color: #333;
     margin-bottom: 40px;
 }
+
 .divisions-container {
     display: flex;
     justify-content: center;
     gap: 50px;
     flex-wrap: wrap;
 }
+
 .division-card {
     background: none;
     padding: 20px;
@@ -185,11 +323,13 @@ body {
     border-radius: 10px;
     /* box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15); */
 }
+
 .division-card img {
     width: 100%;
     height: 250px;
     object-fit: cover;
 }
+
 .division-card h3 {
     font-size: 20px;
     color: #1f2b49;
@@ -204,13 +344,15 @@ body {
 .strategy-section {
     text-align: center;
     padding: 40px 20px;
-    background-color: #f8f9fa; /* Adjust as needed */
+    background-color: #f8f9fa;
+    /* Adjust as needed */
 }
 
 .strategy-title {
     font-size: 40px;
     font-weight: bolder;
-    color: #222; /* Adjust the color */
+    color: #222;
+    /* Adjust the color */
 }
 
 .strategy-text {
@@ -226,7 +368,8 @@ body {
 /* teeeeeeeeeeeeeessssstttt */
 
 .footer {
-    background-color: #2c2e48; /* Dark background */
+    background-color: #2c2e48;
+    /* Dark background */
     color: white;
     padding: 20px 0;
 }
@@ -249,8 +392,9 @@ body {
 }
 
 .footer-logo img {
-    max-width: 15vw; /* Adjust size */
-    
+    max-width: 15vw;
+    /* Adjust size */
+
 }
 
 /* Contact Info Columns */
@@ -258,7 +402,7 @@ body {
     flex: 1;
     padding: 10px;
     min-width: 200px;
-    
+
 }
 
 .footer-column h3 {
@@ -281,18 +425,12 @@ body {
     text-decoration: underline;
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
-    .footer-container {
-        flex-direction: column;
-        text-align: center;
+    .footer-logo img {
+        max-width: 50vw; /* Adjust size for smaller screens */
     }
-    
-    .footer-logo {
-        text-align: center;
-    }
-    
-    .footer-column {
-        text-align: center;
+
+    .footer-column h3, .footer-column p {
+        font-size: 16px; /* Slightly smaller text on mobile */
     }
 }
