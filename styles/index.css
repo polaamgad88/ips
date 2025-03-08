@@ -112,7 +112,7 @@ body {
 
 /* Banner Section */
 .banner {
-    background: url('/assets/2.png') no-repeat center center/cover;
+    background: url('../assets/2.png') no-repeat center center/cover;
     padding: 80px 20px;
     color: white;
     text-align: center;
@@ -136,7 +136,7 @@ body {
 
 @media (max-width: 768px) {
     .banner {
-        height: max-content; /* Adjust height for smaller screens */
+        height: max-content; /* Adjust height for smaller scrsseens */
         padding: 49vw 14vw;
     }
 
