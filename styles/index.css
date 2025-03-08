@@ -4,15 +4,107 @@ body {
     font-family: Arial, sans-serif;
     text-align: center;
 }
+ 
+
+/* Default: Hide menu toggle for desktop */
+.menu-toggle {
+    display: none; /* Hide in desktop */
+}
+/* nav */
+/* Navbar Styling */
+.navbar {
+    width: 100%;
+    background: white;
+    /* padding: 10px 0; */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+/* Navbar Links */
+.nav-links {
+    display: flex;
+    justify-content: flex-end;  /* Align items to the right */
+    list-style: none;
+    padding: 0;
+    margin-right: 5%;
+}
+
+.nav-links li {
+    margin: 0 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    color: #1f2b49;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: black;
+    /* border-bottom: 2px solid black; */
+}
+
+
+
+
+/* Mobile styles */
+@media screen and (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+        font-size: 24px;
+        cursor: pointer;
+        padding: 10px;
+        color: black;
+        position: absolute;
+        top: 10px;
+        right: 20px; /* Move ☰ to the right */
+    }
+
+    .nav-links {
+        display: none; /* Hide nav links by default */
+        flex-direction: column;
+        position: absolute;
+        top: 50px;
+        right: 0;
+        width: 200px; /* Adjust width */
+        background: white;
+        text-align: right;
+        padding: 10px 0;
+        /* box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); */
+    }
+
+    .nav-links li {
+        margin: 10px 20px;
+        text-align: left;
+    }
+
+    .nav-links.active {
+        display: flex; /* Show menu when toggled */
+    }
+}
+
+
+
+
+
 
 /* Header */
 .header {
     background: white;
     padding: 10px;
+    margin-top: 90px; /* Push it down below navbar */
+    text-align: center;
+    
 }
 
 .header img {
-    max-width: 200px;
+    max-width: 290px;
+    
 }
 
 /* Hero Section */
@@ -28,15 +120,31 @@ body {
     position: absolute;
 }
 
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
 .hero h1 {
     font-size: 4rem;
     margin: 0;
     margin-left: 15%;
     width: 1000px;
     font-weight: bold;
-
+    
+    /* Apply animation */
+    animation: slideInLeft 1s ease-out;
 }
 
+html {
+    scroll-behavior: smooth;
+}
 .hero span {
     width: 100px;
     display: contents;
@@ -46,6 +154,7 @@ body {
     font-size: 2.2rem;
     margin: 0.5rem 15%;
 }
+
 
 .btn {
     display: inline-block;
@@ -123,6 +232,17 @@ body {
     margin: auto;
 }
 
+.banner h2, .banner p {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.banner.show h2, .banner.show p {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 .banner h2 {
     font-size: 2.5rem;
     font-weight: bold;
@@ -191,7 +311,16 @@ body {
 
     text-align: center;
     width: 180px;
-    /* Adjust width */
+    opacity: 0;
+    transform: translateX(-100px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+
+}
+
+
+.service-item.show {
+    opacity: 1;
+    transform: translateX(0);
 }
 
 /* Make circle size bigger */
@@ -322,8 +451,15 @@ body {
     text-align: center;
     border-radius: 10px;
     /* box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15); */
+
+    opacity: 0; transform: translateX(-50px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out; 
 }
 
+.division-card.show {
+    opacity: 1;
+    transform: translateX(0);
+}
 .division-card img {
     width: 100%;
     height: 250px;
@@ -361,8 +497,21 @@ body {
     max-width: 800px;
     margin: 0 auto;
     line-height: 1.6;
+    white-space: pre-line; /* Prevents text wrapping */
+    overflow: hidden; /* Hides the text initially */
+    border-right: 2px solid #444; /* Creates a typing cursor effect */
 }
 
+
+.cursor {
+    display: inline-block;
+    width: 10px;  /* Adjust width */
+    animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+    50% { opacity: 0; }
+}
 
 
 /* teeeeeeeeeeeeeessssstttt */

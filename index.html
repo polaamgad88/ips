@@ -7,12 +7,25 @@
     <title>IPS Global</title>
     <link rel="stylesheet" href="./styles/index.css">
     <link rel="icon" type="image/x-icon" href="./assets/android-chrome-512x512.png">
+    <script src="./scripts/index.js"></script>
 
 </head>
 
-<body>
+<body id="home">
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+        <ul class="nav-links" id="navMenu">
+            <li><a href="#home" onclick="closeMenu()">Home</a></li>
+            <li><a href="#services" onclick="closeMenu()">Services</a></li>
+            <li><a href="#info" onclick="closeMenu()">About</a></li>
+            <li><a href="#DIVISIONS" onclick="closeMenu()">Different divisions</a></li>
+            <li><a href="#contact" onclick="closeMenu()">Contact Us</a></li>
+        </ul>
+    </nav>
+    
     <!-- Header -->
-    <div class="header">
+    <div class="header" >
         <img src="./assets/logo.png" alt="IPS Global Logo">
     </div>
 
@@ -24,7 +37,7 @@
             <h1 >WE OFFER </h1><span>
              <h1>THE FULL SOLUTION</span></h1>
             <p>A global leader in Production Lines services.</p>
-            <a href="#" class="btn">Learn More</a>
+            <a href="./index.html#info" class="btn">Learn More</a>
         </div>
         <img src="./assets/1.png" alt="Production Line" class="background">
 
@@ -32,7 +45,7 @@
 
 
     <!-- Banner Section (Newly Added) -->
-    <section class="banner">
+    <section class="banner" id="info">
         <div class="banner-content">
             <h2>IPS GLOBAL FZCO</h2>
             <p>
@@ -44,7 +57,7 @@
     </section>
 
     <!-- Services Section -->
-    <section class="services">
+    <section class="services" id="services">
         <h2>OUR SERVICES</h2>
         <div class="service-container">
             <div class="service-item">
@@ -105,7 +118,7 @@
 
 
 
-    <div class="divisions-section">
+    <div class="divisions-section" id="DIVISIONS">
         <h2>DIFFERENT <br> DIVISIONS</h2>
         <p>To cover various activities in the field of MEP contracting and industries Utilities</p>
         <div class="divisions-container">
@@ -133,11 +146,11 @@
 
 
 
-    <footer class="footer">
+    <footer class="footer" id="contact">
         <div class="footer-container">
             <!-- Logo -->
             <div class="footer-logo">
-                <img src="./assets/logo bw.png" alt="IPS Global Logo">
+                <img src="./assets/logo.png" alt="IPS Global Logo">
             </div>
 
             <!-- Contact Info Section -->
@@ -147,13 +160,16 @@
 
             <div class="footer-column">
                 <p><strong>Phone :</strong></p>
-                <p>+971528805374</p>
+                <p><a href="tel:+971528805374">+971528805374</a></p>
 
                 <p><strong>FZCO P.O.BOX</strong></p>
                 <p>413257, Dubai, U.A.E</p>
 
                 <p><strong>Address :</strong></p>
-                <p>Office No. 9WA 107, DAFZA, Dubai Airport Free Zone</p>
+                <p><a href="https://www.google.com/maps/search/?api=1&query=Office+No.+9WA+107,+DAFZA,+Dubai+Airport+Free+Zone" target="_blank">
+                    Office No. 9WA 107, DAFZA, Dubai Airport Free Zone
+                </a>
+                </p>
             </div>
 
             <div class="footer-column">
