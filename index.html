@@ -4,106 +4,159 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IPS Global</title>
-    <link rel="stylesheet" href="./styles/index.css">
-    <link rel="icon" type="image/x-icon" href="./assets/android-chrome-512x512.png">
-    <script src="./scripts/index.js"></script>
 
+    <!-- Title: Keep it concise and include keywords -->
+    <title>IPS Global - Production Line Solutions & Services</title>
+
+    <!-- Meta Description: Briefly describe your site (max 160 characters) -->
+    <meta name="description" content="IPS Global offers top-tier production line solutions and services. Enhance your manufacturing efficiency with our expert solutions.">
+
+    <!-- Meta Keywords (Less important for Google, but useful for some search engines) -->
+    <meta name="keywords" content="IPS Global, production line, industrial solutions, manufacturing services, factory automation">
+
+    <!-- Meta Author -->
+    <meta name="author" content="IPS Global Team">
+
+    <!-- Open Graph (OG) Meta Tags for Social Media -->
+    <meta property="og:title" content="IPS Global - Production Line Solutions & Services">
+    <meta property="og:description" content="Leading provider of production line solutions and industrial services. Optimize your manufacturing with IPS Global.">
+    <meta property="og:image" content="https://yourwebsite.com/assets/preview-image.jpg">
+    <meta property="og:url" content="https://yourwebsite.com">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter Card for Better Social Media Sharing -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="IPS Global - Production Line Solutions">
+    <meta name="twitter:description" content="Enhance your production line with IPS Global's expert solutions.">
+    <meta name="twitter:image" content="https://yourwebsite.com/assets/preview-image.jpg">
+
+    <!-- Canonical Link (Avoids duplicate content issues) -->
+    <link rel="canonical" href="https://yourwebsite.com">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="./assets/android-chrome-512x512.png">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="./styles/index.css">
+
+    <!-- JavaScript (Defer to avoid blocking rendering) -->
+    <script defer src="./scripts/index.js"></script>
 </head>
+
 
 <body id="home">
     <!-- Navigation -->
     <nav class="navbar">
-        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+        <!-- Mobile Menu Toggle -->
+        <button class="menu-toggle" onclick="toggleMenu()" aria-label="Open Menu">☰</button>
+    
+        <!-- Navigation Links -->
         <ul class="nav-links" id="navMenu">
             <li><a href="#home" onclick="closeMenu()">Home</a></li>
+            
+            <!-- Dropdown Menu for Services -->
             <li class="dropdown">
-                <a href="#services" onclick="closeMenu()">Services</a>
+                <a href="#services" onclick="closeMenu()" aria-haspopup="true" aria-expanded="false">Services</a>
                 <ul class="dropdown-menu">
-                    <li><a href="./retrofits.html"> Retrofits</a></li>
+                    <li><a href="./retrofits.html">Retrofits</a></li>
                     <li><a href="./troubleshooting.html">Troubleshooting</a></li>
                     <li><a href="./installation.html">Installation</a></li>
                     <li><a href="./consult.html">Consulting</a></li>
                     <li><a href="./commission.html">Commissioning</a></li>
                     <li><a href="./overhaul.html">Overhauling</a></li>
                 </ul>
-            </li>            <li><a href="#info" onclick="closeMenu()">About</a></li>
+            </li>
+    
+            <li><a href="#info" onclick="closeMenu()">About</a></li>
             <li><a href="./gallery.html" onclick="closeMenu()">Gallery</a></li>
             <li><a href="#contact" onclick="closeMenu()">Contact Us</a></li>
         </ul>
     </nav>
     
+    
     <!-- Header -->
-    <div class="header" >
-        <a href="./index.html">
-            <img src="./assets/logo.png" alt="IPS Global Logo"></a>    </div>
+   <!-- Header Section -->
+<header class="header">
+    <a href="./index.html">
+        <img src="./assets/logo.png" alt="IPS Global - Home">
+    </a>
+</header>
 
-    <!-- Hero Section -->
-    <!-- Hero Section -->
-    <!-- Hero Section -->
-    <div class="hero">
-        <div class="hero-content">
-            <h1 >WE OFFER </h1><span>
-             <h1>THE FULL SOLUTION</span></h1>
-            <p>A global leader in Production Lines services.</p>
-            <a href="./index.html#info" class="btn">Learn More</a>
+<!-- Hero Section -->
+<section class="hero">
+    <div class="hero-content">
+        <h1>WE OFFER <span>THE FULL SOLUTION</span></h1>
+        <p>A global leader in Production Lines services.</p>
+        <a href="./index.html#info" class="btn">Learn More</a>
+    </div>
+    <img src="./assets/1.webp" alt="IPS Global" class="background">
+</section>
+
+
+
+<!-- Banner Section -->
+<section class="banner" id="info">
+    <div class="banner-content">
+        <h2>IPS Global FZCO </h2>
+        <p>
+            IPS Global FZCO, based in Dubai, is a global leader in supplying food and beverage spare parts at 
+            competitive prices. We also specialize in machinery installation, relocation, overhauling, 
+            maintenance, commissioning, and retrofitting, serving clients worldwide.
+        </p>
+    </div>
+</section>
+
+
+<!-- Services Section -->
+<section class="services" id="services">
+    <h2>Our Services </h2>
+    <div class="service-container">
+
+        <div class="service-item">
+            <a href="./retrofits.html">
+                <img src="./assets/retro.webp" alt="Industrial Machinery Retrofits IPS">
+            </a>
+            <p>Retrofits</p>
         </div>
-        <img src="./assets/1.png" alt="Production Line" class="background">
+
+        <div class="service-item">
+            <a href="./troubleshooting.html">
+                <img src="./assets/troubl.webp" alt="Troubleshooting and Diagnostics IPS">
+            </a>
+            <p>Troubleshooting</p>
+        </div>
+
+        <div class="service-item">
+            <a href="./installation.html">
+                <img src="./assets/install.webp" alt=" IPS Industrial Equipment Installation and Relocation">
+            </a>
+            <p>Installation & Relocation</p>
+        </div>
+
+        <div class="service-item">
+            <a href="./consult.html">
+                <img src="./assets/consult.webp" alt="IPS Consulting for Machinery Optimization">
+            </a>
+            <p>Consulting</p>
+        </div>
+
+        <div class="service-item">
+            <a href="./commission.html">
+                <img src="./assets/comm.webp" alt="IPS Commissioning of Industrial Systems">
+            </a>
+            <p>Commissioning</p>
+        </div>
+
+        <div class="service-item">
+            <a href="./overhaul.html">
+                <img src="./assets/over.webp" alt="IPS Machinery Overhauling Services">
+            </a>
+            <p>Overhauling</p>
+        </div>
 
     </div>
+</section>
 
-
-    <!-- Banner Section (Newly Added) -->
-    <section class="banner" id="info">
-        <div class="banner-content">
-            <h2>IPS GLOBAL FZCO</h2>
-            <p>
-                IPS Global FZCO Dubai is a Leading Global service company supplying food and beverage Spare parts
-                with competitive prices beside services such as machinery installation, relocation, Overhauling,
-                maintenance, commissioning and retrofit to over many countries all around the world.
-            </p>
-        </div>
-    </section>
-
-    <!-- Services Section -->
-    <section class="services" id="services">
-        <h2>OUR SERVICES</h2>
-        <div class="service-container">
-            <div class="service-item">
-            <a href="./retrofits.html">
-                <img src="./assets/retro.png" alt="Retrofits">
-            </a>
-                <p>RETROFITS</p>
-            </div>
-
-
-            <div class="service-item">
-                <a href="./troubleshooting.html">
-                    <img src="./assets/troubl.png" alt="Troubleshooting"></a>
-                <p>TROUBLESHOOTING</p>
-            </div>
-            <div class="service-item">
-                <a href="./installation.html">
-                    <img src="./assets/install.png" alt="Installation"></a>
-                <p>INSTALLATION & RELOCATION</p>
-            </div>
-            <div class="service-item">
-                <a href="./consult.html">
-                    <img src="./assets/consult.png" alt="Consulting"></a>
-                <p>CONSULTING</p>
-            </div>
-            <div class="service-item">
-                <a href="./commission.html">
-                    <img src="./assets/comm.png" alt="Commissioning"></a>
-                <p>COMMISSIONING</p>
-            </div>
-            <div class="service-item">
-                <a href="./overhaul.html">
-                    <img src="./assets/over.png" alt="Overhauling"></a>
-                <p>OVERHAULING</p>
-            </div>
-        </div>
-    </section>
 
 
 
@@ -111,21 +164,21 @@
         <h2>ABOUT IPS GLOBAL FZCO</h2>
         <div class="about-container">
             <div class="about-card">
-                <img src="./assets/4.png" alt="Dubai City">
+                <img src="./assets/4.webp" alt="Dubai IPS">
                 <p>
                     A one of the well-established & leading market companies in the United Arab Emirates
                     holding diversified business objectives in the field of Electromechanical installation.
                 </p>
             </div>
             <div class="about-card">
-                <img src="./assets/3.png" alt="Business Area">
+                <img src="./assets/3.webp" alt="IPS Global">
                 <p>
                     A part of a regional group called Al Ryada Group established in Dubai in 2014 and operational in UAE
                     and Middle East.
                 </p>
             </div>
             <div class="about-card">
-                <img src="./assets/5.png" alt="Egypt at Night">
+                <img src="./assets/5.webp" alt="IPS">
                 <p>
                     Also hold under its umbrella our branch in Egypt Al Ryada Electromechanical Works.
                 </p>
@@ -136,21 +189,27 @@
 
 
 
-    <div class="divisions-section" id="DIVISIONS">
-        <h2>DIFFERENT <br> DIVISIONS</h2>
-        <p>To cover various activities in the field of MEP contracting and industries Utilities</p>
+    <section class="divisions-section">
+        <h2>IPS Divisions – Specialized Engineering & Industrial Services</h2>
+        <p>IPS Global provides expert solutions in MEP contracting, utilities, and industrial sectors.</p>
+    
         <div class="divisions-container">
+    
             <div class="division-card">
-                <img src="./assets/6.png" alt="Engineering Services Division">
-                <h3>ENGINEERING <br> SERVICES DIVISION</h3>
+                <img src="./assets/6.webp" alt="IPS Engineering Services Division - MEP Contracting & Industrial Solutions">
+                <h3>IPS Engineering Services Division</h3>
+                <p>IPS specializes in industrial and MEP contracting solutions, ensuring high-performance systems.</p>
             </div>
+    
             <div class="division-card">
-                <img src="./assets/7.png" alt="Food & Beverages Services Division">
-                <h3>FOOD & BEVERAGES <br> SERVICES DIVISION</h3>
+                <img src="./assets/7.webp" alt="IPS Food & Beverage Services Division - Processing & Maintenance">
+                <h3>IPS Food & Beverage Services Division</h3>
+                <p>IPS provides expert solutions for food and beverage production, maintenance, and system optimization.</p>
             </div>
+    
         </div>
-    </div>
-
+    </section>
+    
 
 
     <section class="strategy-section">
@@ -163,43 +222,43 @@
     </section>
 
 
-
     <footer class="footer" id="contact">
         <div class="footer-container">
-            <!-- Logo -->
+            <!-- IPS Global Logo -->
             <div class="footer-logo">
-                <img src="./assets/logo.png" alt="IPS Global Logo">
+                <img src="./assets/logo.png" alt="IPS Global - Industrial Solutions">
             </div>
-
-            <!-- Contact Info Section -->
+    
+            <!-- Contact Information -->
             <div class="footer-column">
-                <h3>CONTACT US</h3>
+                <h3>Contact IPS Global</h3>
             </div>
-
+    
             <div class="footer-column">
                 <p><strong>Phone :</strong></p>
-                <p><a href="tel:+971528805374">+971528805374</a></p>
-
-                <p><strong>FZCO P.O.BOX</strong></p>
+                <p><a href="tel:+971528805374">+971 528 805 374</a></p>
+    
+                <p><strong>IPS Global FZCO P.O.BOX:</strong></p>
                 <p>413257, Dubai, U.A.E</p>
-
-                <p><strong>Address :</strong></p>
-                <p><a href="https://www.google.com/maps/search/?api=1&query=Office+No.+9WA+107,+DAFZA,+Dubai+Airport+Free+Zone" target="_blank">
-                    Office No. 9WA 107, DAFZA, Dubai Airport Free Zone
-                </a>
+    
+                <p><strong>Our Office:</strong></p>
+                <p>
+                    <a href="https://www.google.com/maps/search/?api=1&query=Office+No.+9WA+107,+DAFZA,+Dubai+Airport+Free+Zone" target="_blank">
+                        Office No. 9WA 107, DAFZA, Dubai Airport Free Zone
+                    </a>
                 </p>
             </div>
-
+    
             <div class="footer-column">
-                <p><strong>Email :</strong></p>
+                <p><strong>Email:</strong></p>
                 <p><a href="mailto:info@ipsg.ae">info@ipsg.ae</a></p>
-
-                <p><strong>Website :</strong></p>
+    
+                <p><strong>Official Website:</strong></p>
                 <p><a href="https://www.ipsg.ae" target="_blank">www.ipsg.ae</a></p>
             </div>
         </div>
     </footer>
-
+    
 </body>
 
 </html>
