@@ -58,8 +58,6 @@ function closeMenu() {
 }
 
 
-
-
 document.addEventListener("DOMContentLoaded", function () {
     const strategyText = document.querySelector(".strategy-text");
 

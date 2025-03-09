@@ -521,7 +521,6 @@ html {
     font-weight: bolder;
     color: #222;
 }
-
 .strategy-text {
     font-size: 24px;
     color: #444;
@@ -530,14 +529,14 @@ html {
     line-height: 1.6;
     white-space: pre-line;
     overflow: hidden;
-    
-    /* Animation - Start hidden and slightly below */
+
+    /* Initial state - hidden and moved down */
     opacity: 0;
     transform: translateY(50px);
-    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    transition: opacity 1s ease-out, transform 1s ease-out;
 }
 
-/* When 'show' class is added (Make it visible and move up) */
+/* When the 'show' class is added, it fades in and moves up */
 .strategy-text.show {
     opacity: 1;
     transform: translateY(0);
