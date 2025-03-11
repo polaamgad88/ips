@@ -4,3 +4,5 @@ window.addEventListener("scroll",revealOnScroll);revealOnScroll()});function tog
 function closeMenu(){document.getElementById("navMenu").classList.remove("active")}
 document.addEventListener("DOMContentLoaded",function(){const strategyText=document.querySelector(".strategy-text");function revealStrategyText(){if(!strategyText)return;const rect=strategyText.getBoundingClientRect();if(rect.top<window.innerHeight-50){strategyText.classList.add("show");window.removeEventListener("scroll",revealStrategyText)}}
 window.addEventListener("scroll",revealStrategyText);revealStrategyText()})
+
+
