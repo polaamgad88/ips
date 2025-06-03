@@ -36,28 +36,79 @@
     </nav>
     
     <!-- Header -->
-    <div class="header" >
+    <div class="header">
         <a href="./index.html">
-            <img src="./assets/logo.png" alt="IPS Global Logo"></a>    </div>
-
-    <div class="gallery">
-        <img src="./assets/3.webp" alt="Gallery  3">
-        <img src="./assets/3.webp" alt="Gallery  3">
-
-        <img src="./assets/3.webp" alt="Gallery  3">
-        <img src="./assets/3.webp" alt="Gallery  3">
-        <img src="./assets/3.webp" alt="Gallery  3">
-        <img src="./assets/3.webp" alt="Gallery  3">
-        <img src="./assets/3.webp" alt="Gallery  3">
-        <img src="./assets/3.webp" alt="Gallery  3">
-        <img src="./assets/3.webp" alt="Gallery  3">
-        <img src="./assets/3.webp" alt="Gallery  3">
-        <img src="./assets/3.webp" alt="Gallery  3">
-        <img src="./assets/3.webp" alt="Gallery  3">
-
-    </div>
-
-
+          <img src="./assets/logo.png" alt="IPS Global Logo">
+        </a>
+      </div>
+      
+      <div class="gallery" id="gallery"></div>
+      
+      <script>
+        const gallery = document.getElementById('gallery');
+      
+        // Manually list all your image filenames here
+        const files = [
+        'WhatsApp Image 2025-06-03 at 19.28.00_fefab7b9.jpg',
+          'IMG-20250603-WA0003.jpg',
+          'IMG-20250603-WA0004.jpg',
+          'IMG-20250603-WA0005.jpg',
+          'IMG-20250603-WA0006.jpg',
+          'IMG-20250603-WA0007.jpg',
+          'IMG-20250603-WA0008.jpg',
+          'IMG-20250603-WA0009.jpg',
+          'IMG-20250603-WA0010.jpg',
+          'IMG-20250603-WA0011.jpg',
+          'IMG-20250603-WA0012.jpg',
+          'IMG-20250603-WA0013.jpg',
+          'IMG-20250603-WA0014.jpg',
+          'IMG-20250603-WA0015.jpg',
+          'IMG-20250603-WA0017.jpg',
+          'IMG-20250603-WA0018.jpg',
+          'IMG-20250603-WA0019.jpg',
+          'IMG-20250603-WA0020.jpg',
+          'IMG-20250603-WA0026.jpg',
+          'IMG-20250603-WA0028.jpg',
+          'IMG-20250603-WA0029.jpg',
+          'IMG-20250603-WA0030.jpg',
+          'IMG-20250603-WA0031.jpg',
+          'IMG-20250603-WA0032.jpg',
+          'IMG-20250603-WA0033.jpg',
+          'IMG-20250603-WA0034.jpg',
+          'IMG-20250603-WA0035.jpg',
+          'IMG-20250603-WA0036.jpg',
+          'IMG-20250603-WA0037.jpg',
+          'IMG-20250603-WA0038.jpg',
+          'IMG-20250603-WA0039.jpg',
+          'IMG-20250603-WA0040.jpg',
+          'IMG-20250603-WA0041.jpg',
+          'IMG-20250603-WA0042.jpg',
+          'IMG-20250603-WA0043.jpg',
+          'IMG-20250603-WA0044.jpg',
+          'IMG-20250603-WA0045.jpg',
+          'IMG-20250603-WA0046.jpg',
+          'IMG-20250603-WA0047.jpg',
+          'IMG-20250603-WA0048.jpg',
+          'IMG-20250603-WA0049.jpg',
+          'IMG-20250603-WA0050.jpg',
+          'VID-20250603-WA0002.mp4',
+          'WhatsApp Image 2025-06-03 at 19.07.44_11aacfbe.jpg',
+        //   'WhatsApp Image 2025-06-03 at 19.07.44_75f7f4ec1.jpg',
+          'WhatsApp Image 2025-06-03 at 19.07.44_1459d161.jpg',
+        //   'WhatsApp Image 2025-06-03 at 19.07.45_aee8061a.jpg',
+          'WhatsApp Image 2025-06-03 at 19.28.00_d750c5fa.jpg'        ];
+      
+        files.forEach(file => {
+          // Only display images (skip videos if you want)
+          if (/\.(jpe?g|png|gif)$/i.test(file)) {
+            const img = document.createElement('img');
+            img.src = `./assets/gallery/${encodeURIComponent(file)}`;
+            img.alt = file;
+            gallery.appendChild(img);
+          }
+        });
+      </script>
+      
 
     <footer class="footer" id="contact">
         <div class="footer-container">
